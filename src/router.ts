@@ -14,7 +14,6 @@ router.get('/:id',
     getProductById)
 
 router.post('/', 
-    param('id').isInt().withMessage('Invalid ID'),
     body('name')
         .notEmpty().withMessage("Name can't be empty"),
     body('price')
@@ -26,6 +25,7 @@ router.post('/',
 )
 
 router.put('/:id', 
+    param('id').isInt().withMessage('Invalid ID'),
     body('name')
         .notEmpty().withMessage("Name can't be empty"),
     body('price')
@@ -45,6 +45,7 @@ router.patch('/:id',
 
 router.delete('/:id', 
     param('id').isInt().withMessage('Invalid ID'),
+    handleInputErrors,
     deleteProduct)
 
 
