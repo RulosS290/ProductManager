@@ -2,7 +2,7 @@
 
 **ProductManager** is a RESTful API built with **Express** and **TypeScript** for managing product data.
 It uses **PostgreSQL** as the database and **Sequelize** as the ORM to handle data operations efficiently with full TypeScript support.
-Now includes **automated testing with Jest and Supertest** for 100% code coverage.
+Now includes **automated testing with Jest and Supertest** for 100% code coverage and **interactive API documentation with Swagger UI**.
 
 ---
 
@@ -14,6 +14,7 @@ Now includes **automated testing with Jest and Supertest** for 100% code coverag
 * **PostgreSQL 17 (Docker)** → Relational database
 * **dotenv** → Environment variable management
 * **express-validator** → Request validation middleware
+* **Swagger UI** → Interactive API documentation
 * **nodemon** + **ts-node** → Live development
 * **Jest** + **Supertest** → Unit and integration testing
 * **ts-jest** → Jest transformer for TypeScript
@@ -54,6 +55,22 @@ The API will be available at:
 
 ---
 
+## 📘 API Documentation (Swagger)
+
+This project includes **Swagger UI** to explore and test all available endpoints directly from the browser.
+
+Once the server is running, visit:
+
+👉 **[http://localhost:3000/api/docs/](http://localhost:3000/api/docs/)**
+
+Swagger provides:
+
+* Live documentation of all routes
+* Request and response schemas
+* Built-in “Try it out” feature to test endpoints in real time
+
+---
+
 ## 🧪 Testing & Coverage
 
 This project includes **Jest** and **Supertest** for full testing coverage.
@@ -77,8 +94,7 @@ npm run test:coverage
 | Functions  | 100%     |
 | Lines      | 100%     |
 
-<img width="548" height="223" alt="image" src="https://github.com/user-attachments/assets/679c764f-1260-40fd-8563-6e2e58a83eca" />
-
+<img width="548" height="223" alt="coverage" src="https://github.com/user-attachments/assets/679c764f-1260-40fd-8563-6e2e58a83eca" />
 
 ---
 
@@ -132,7 +148,7 @@ src/
  ├── controllers/     # Business logic
  ├── handlers/        # Request handlers
  ├── models/          # Sequelize models
- ├── config/          # DB and environment configuration
+ ├── config/          # DB and environment configuration & Swagger documentation setup
  ├── middlewares/     # Validations, error handling, etc.
  └── data/            # Scripts for test data reset
 ```
