@@ -167,7 +167,7 @@
 			"response": []
 		},
 		{
-			"name": "Product",
+			"name": "Update Product Availability",
 			"event": [
 				{
 					"listen": "test",
@@ -189,7 +189,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"price\": 109.99\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -212,7 +212,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Delete",
 			"request": {
 				"method": "DELETE",
 				"header": [],
