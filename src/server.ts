@@ -1,5 +1,7 @@
 import colors from "colors"
 import express from "express";
+import swaggerUI from "swagger-ui-express"
+import swaggerSpec, { swaggerUiOptions } from "./config/swagger";
 import router from "./router";
 import db from "./config/db";
 
@@ -25,5 +27,8 @@ const server = express()
 server.use(express.json())
 
 server.use('/api/products', router)
+
+// Docs
+server.use('/api/docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec, swaggerUiOptions))
 
 export default server
