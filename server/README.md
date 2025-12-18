@@ -103,12 +103,7 @@ npm run test:coverage
 You can run PostgreSQL locally with Docker:
 
 ```bash
-docker run --name postgres17 \
-  -e POSTGRES_USER=admin \
-  -e POSTGRES_PASSWORD=admin123 \
-  -e POSTGRES_DB=products \
-  -p 5432:5432 \
-  -d postgres:17
+docker run --name postgres17 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin123 -e POSTGRES_DB=products -p 5432:5432 -d postgres:17
 ```
 
 Connection URL:
