@@ -15,7 +15,7 @@ export default function ProductForm({product} : ProductFormProps) {
                 <input 
                     id="name"
                     type="text"
-                    className="mt-2 block w-full p-3 bg-gray-50 bg-gray-100 border border-gray-200 rounded-md"
+                    className="mt-2 block w-full p-3 bg-gray-100 border border-gray-200 rounded-md"
                     placeholder="Product Name"
                     name="name"
                     defaultValue={product?.name}
