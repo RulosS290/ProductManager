@@ -122,6 +122,27 @@ docker rmi postgres:17
 
 ---
 
+## 🔐 Environment Variables
+
+Create a `.env` file in the root directory of the project and add the following variables:
+
+```env
+DATABASE_URL=postgresql://admin:admin123@localhost:5432/products
+FRONTEND_URL=http://localhost:5173
+```
+
+### Optional
+
+If you want the server to run on a specific port, you can also define:
+
+```env
+PORT=3000
+```
+
+If `PORT` is not provided, the application will use the default port defined in the code.
+
+---
+
 ## 🧠 Postman Collection
 
 A ready-to-use **Postman collection** is included to test all endpoints.
