@@ -104,10 +104,6 @@ npm run build
 # Preview production build
 npm run preview
 
-# Run ESLint
-npm run lint
-```
-
 ---
 
 ## 🔗 Backend Dependency
