@@ -37,7 +37,7 @@ export default function ProductDetails({product} : ProductDetailsProps) {
                         value={product.id}
                         className={`${isAvailable ? 'text-black' : 'text-red-600'} rounded-lg p-2 text-xs uppercase font-bold w-full border border-slate-100 hover:cursor-pointer`}
                     >
-                        {isAvailable ? 'Disponible' : 'No disponible'}
+                        {isAvailable ? 'Available' : 'Not available'}
                     </button>
                 </fetcher.Form>
             </td>

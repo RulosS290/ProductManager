@@ -20,7 +20,7 @@ export async function action({request, params} : ActionFunctionArgs) {
 
     let error = ''
     if(Object.values(data).includes('')) {
-        error = 'Todos los campos son obligatorios'
+        error = 'All fields are required'
     }
 
     if(error.length) {
@@ -37,8 +37,8 @@ export async function action({request, params} : ActionFunctionArgs) {
 export default function EditProduct() {
 
     const availabilityOptions = [
-        { name: 'Disponible', value: true},
-        { name: 'No Disponible', value: false}
+        { name: 'Available', value: true},
+        { name: 'Not Available', value: false}
     ]
 
     const product = useLoaderData() as Product
@@ -52,7 +52,7 @@ export default function EditProduct() {
                     to='/'
                     className='rounded-md bg-indigo-600 p-3 text-sm font-bold text-white shadow-sm hover:bg-indigo-500'
                 >
-                    Volver a Productos
+                    Back to Products
                 </Link>
             </div>
 
@@ -69,10 +69,10 @@ export default function EditProduct() {
                     <label
                         className="text-gray-800"
                         htmlFor="availability"
-                    >Disponibilidad:</label>
+                    >Availability:</label>
                     <select 
                         id="availability"
-                        className="mt-2 block w-full p-3 bg-gray-50"
+                        className="mt-2 block w-full p-3 bg-gray-50 border border-gray-200 rounded-md"
                         name="availability"
                         defaultValue={product?.availability.toString()}
                     >

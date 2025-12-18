@@ -8,7 +8,7 @@ export async function action({request} : ActionFunctionArgs) {
 
     let error = ''
     if(Object.values(data).includes('')) {
-        error = 'Todos los campos son obligatorios'
+        error = 'All fields are required'
     }
 
     if(error.length) {
@@ -32,7 +32,7 @@ export default function NewProduct() {
                     to='/'
                     className='rounded-md bg-indigo-600 p-3 text-sm font-bold text-white shadow-sm hover:bg-indigo-500'
                 >
-                    Volver a Productos
+                    Back to Products
                 </Link>
             </div>
 
